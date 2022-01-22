@@ -1,0 +1,56 @@
+Link para download do Git: https://git-scm.com/downloads
+
+O Git Bash é um terminal estendido para otimizar o uso do Git.
+
+Git é um sistema de versionamento de código comumente utilizado para projetos de desenvolvimento de software. 
+Isso significa que ele trabalha como um intermediador entre um repositório local e um remoto (como por exemplo o GitHub), onde você pode controlar e administrar as alterações e atualizações do seu código. 
+Lembrando que Git e GitHub não são a mesma coisa!!
+Fica mais fácil de compreender o que é o Git quando analisamos o fluxo de trabalho do Git.
+
+git init: inicializa um repositório local git
+git status: verifica o estado dos seus arquivos
+git add <nomeDoArquivo>: envia seu arquivo especificado para o Stage
+git add - -all: envia todos os arquivos para o Stage
+git commit -m “tituloDoCommit: envia o que está no Stage para o HEAD
+git remote add origin urlDoRepositorio: adiciona e indica a URL do repositório remoto em que os arquivos serão mantidos
+git push origin master: envia os arquivos para o repositório remoto que você especificou através da URL do comando acima
+git checkout -b <nomeDaBranch>: cria uma nova branch
+git checkout <nomeDaBranch>: alterna para a branch especificada
+
+Fluxo :
+De forma resumida, o Git abrange 3 camadas. 
+O chamado “Working Directory”, que é onde você está codificando seu projeto, o “Index”, também chamado de “Stage”, que é uma camada onde você adiciona suas modificações de forma não permanente, ou seja, nesta camada você pode resetar as alterações que você incluiu no Stage/Index ou então partir para a próxima camada, a chamada de “HEAD”, quando você confirma suas alterações fazendo um “commit”. 
+Porém essa ultima camada ainda não é o seu repositório remoto para o qual você deseja incrementar suas modificações. 
+Para que o seu código chegue até o repositório remoto é necessario um comando muito simples chamado git push. 
+Vou explicar melhor os comandos.
+
+Git Bash :
+Todo esse fluxo descrito acima é manipulado através do Git Bash (caso você utilize Windows). 
+Contextualizando, o Git foi feito inicialmente para rodar em sistemas Unix, que não é o caso do Windows.
+Assim, foi criado o Git Bash, uma aplicação que emula um terminal Unix e permite que você desfrute dos comandos Git. 
+O Git Bash já vem no pacote de instalação do Git para Windows. 
+
+Comandos: 
+Existem diversos comandos Git.
+Aqui eu vou demonstrar apenas alguns básicos porém suficientes para que você consiga criar seu repositório, e trabalhar de forma integrada com ele.
+Primeiro crie seu repositório seu local. Sua pasta onde ficará seu projeto.
+Entre na pasta e clique com o botão direito do mouse. Selecione o Git Bash:
+Para iniciar o repositório utilize o comando “git init” :
+Você pode verificar o status do repositório com o comando “git status”. 
+É uma boa prática sempre conferir o status antes de iniciar com o fluxo das alterações e durante ele também:
+Se você ainda não tiver nenhum arquivo nessa pasta, crie algum para continuar com o processo. Essa é a camada Working Directory.
+A próxima camada é o Index. 
+Para mandar o seu arquivo para o index, basta utilizar o comando “git add nomeDoArquivo” ou se você quiser enviar ao Index todos os arquivos basta utilizar o parâmetro all. 
+Assim: “git add -all”:
+Para verificar se o git está acompanhando seu arquivo, dê o comando “git status”. 
+Se estiver tudo certo, aparecerá esta mensagem, o que significa que seu arquivo criado está na camada Stage:
+Depois que seus arquivos novos ou modificados estiverem na camada de Stage, você pode commita-los, ou seja, envia-los à ultima camada do fluxo, HEAD. 
+Para isso use o comando “git commit -m “tituloDoCommit”. 
+O parâmetro “-m” é passado para que você possa escrever uma descrição junto ao commit:
+Agora a última etapa do fluxo é enviar o(s) arquivo(s) ao repositório remoto. 
+Se você ainda não tem, crie um repositório remoto, pode ser no GitHub, GitLab ou qualquer outro de sua preferência.
+
+O Git Bash é o aplicativo para ambientes do Microsoft Windows que oferece a camada de emulação para a experiência de linha de comando Git. Bash é acrônico para "Bourne Again Shell". 
+Shells são aplicativos terminais usados como interface em sistemas operacionais por meio de comandos gravados.
+
+
